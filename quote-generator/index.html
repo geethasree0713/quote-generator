@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quote Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-glyph">&rdquo;</div>
+
+<header class="topbar">
+  <div class="brand">Quotefolio</div>
+  <button id="favToggleBtn" class="favToggleBtn">
+    <span class="heartIcon">&#9825;</span> <span id="favCount">0</span> saved
+  </button>
+</header>
+
+<main class="wrap">
+
+  <div class="qotdBanner" id="qotdBanner">
+    <span class="qotdLabel">Quote of the day</span>
+    <p id="qotdText"></p>
+  </div>
+
+  <div class="catRow" id="catRow">
+    <button class="catPill active" data-cat="all">All</button>
+    <button class="catPill" data-cat="motivation">Motivation</button>
+    <button class="catPill" data-cat="success">Success</button>
+    <button class="catPill" data-cat="life">Life</button>
+    <button class="catPill" data-cat="happiness">Happiness</button>
+  </div>
+
+  <section class="card" id="card">
+    <span class="cardIndex" id="cardIndex">001</span>
+    <p class="quoteText" id="quoteText">Loading a quote for you...</p>
+    <p class="quoteAuthor" id="quoteAuthor"></p>
+
+    <div class="actionsRow">
+      <button class="iconBtn" id="favBtn" title="Save to favorites">
+        <span id="favIcon">&#9825;</span>
+      </button>
+      <button class="iconBtn" id="copyBtn" title="Copy quote">
+        &#128203;
+      </button>
+      <div class="shareGroup">
+        <button class="iconBtn shareBtn" id="twitterBtn" title="Share on Twitter">X</button>
+        <button class="iconBtn shareBtn" id="linkedinBtn" title="Share on LinkedIn">in</button>
+        <button class="iconBtn shareBtn" id="whatsappBtn" title="Share on WhatsApp">&#128172;</button>
+      </div>
+    </div>
+  </section>
+
+  <button class="newQuoteBtn" id="newQuoteBtn">New Quote</button>
+
+  <span class="toast" id="toast"></span>
+
+</main>
+
+<div class="favPanel" id="favPanel">
+  <div class="favPanelHead">
+    <h2>Your favorites</h2>
+    <button class="closeBtn" id="closeFavBtn">&times;</button>
+  </div>
+  <div class="favList" id="favList"></div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
