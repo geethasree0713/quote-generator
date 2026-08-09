@@ -2,7 +2,7 @@
 
 A simple random quote generator built with HTML, CSS and vanilla JavaScript.
 
-## vercel-
+## vercel
 https://quote-generator-eight-liard.vercel.app/
 ## Features
 - Random motivational/success/life/happiness quotes
